@@ -1,0 +1,62 @@
+@import "./reset.css";
+@import "../fonts/font.css";
+@media only screen and (min-width: 1024px) {
+  /* Ваш стиль для ПК здесь */
+  body {
+    color: #666;
+    font-family: "Graphik LCG";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 102%;
+    cursor: default;
+  }
+  h1 {
+    color: #000;
+    font-family: "Graphik LCG";
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 102%;
+  }
+  h2 {
+    color: #000;
+    font-family: "Graphik LCG";
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 102%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Ваш стиль для планшета здесь */
+  body {
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* Ваш стиль для телефона здесь */
+  body {
+    color: #666;
+    font-family: "Graphik LCG";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 102%;
+  }
+  h1 {
+    color: #000;
+    font-family: "Graphik LCG";
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 102%;
+  }
+  h2 {
+    color: #000;
+    font-family: "Graphik LCG";
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 102%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,26 @@
+.why {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 150px;
+  &__row {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    margin-top: 30px;
+    width: 373px;
+  }
+}
+
+.cards {
+  &__row {
+    display: flex;
+  }
+  &__row:first-child {
+    margin-bottom: 10px;
+  }
+  &__item:first-child {
+    margin-right: 10px;
+  }
+}

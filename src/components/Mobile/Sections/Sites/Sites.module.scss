@@ -1,0 +1,125 @@
+.sites {
+  margin: 0 auto;
+  padding: 0px 23px;
+  &__title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  &__column {
+    padding: 40px 15px 20px 15px;
+    border-radius: 30px;
+  }
+  &__block {
+    border-radius: 30px;
+  }
+}
+
+.column {
+  &__image {
+    margin: 0 auto;
+    width: 299px;
+  }
+  &__image img {
+    width: 100%;
+  }
+  &__title {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__text {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 290px;
+  }
+  &__cost {
+    width: 112px;
+  }
+  &__plank {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+  &__row2 {
+    display: flex;
+    flex-direction: column;
+  }
+  margin-bottom: 10px;
+}
+
+.block {
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__row {
+    margin-top: 10px;
+  }
+  &__text {
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    width: 290px;
+  }
+  &__column {
+    padding: 40px 15px 20px 15px;
+  }
+  &__plank {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+  &__row2 {
+  }
+  &__button {
+  }
+}
+
+.button {
+  display: flex;
+  height: 55px;
+  padding: 22px 40px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #fff;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 102%; /* 18.36px */
+}
+
+.button:hover {
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+}
+
+.cost {
+  display: inline-flex;
+  padding: 10px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #000;
+  color: #000;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 16px;
+}

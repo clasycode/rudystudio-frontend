@@ -1,0 +1,158 @@
+.last {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 100px;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.last__title {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.casesContainer {
+  display: flex;
+  overflow-x: hidden;
+  flex-grow: 1;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.case {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.case:first-child {
+  margin-right: 20px;
+}
+
+.caseContent {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.caseContent h2 {
+  font-size: 18px;
+  color: #333;
+}
+
+.cases {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.cases__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cases__column {
+  flex: 0 0 calc(50% - 20px);
+  border-radius: 30px;
+  background: #f8f8f8;
+  overflow: hidden;
+}
+
+.column {
+  padding: 25px;
+}
+
+.column__img {
+  width: 100%;
+  height: 215px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.column__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.column__title {
+  margin-bottom: 45px;
+  margin-top: 20px;
+  font-size: 24px;
+  line-height: 110%;
+}
+
+.column__title a {
+  text-decoration: none;
+  color: #000;
+}
+
+.bottomButtons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.column__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column__button {
+  width: 36px;
+  height: 36px;
+}
+
+.column__button img {
+  width: 100%;
+  height: 100%;
+}
+
+.column__sphere {
+  border-radius: 20px;
+  display: inline-flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.arrows img {
+  cursor: pointer;
+}
+
+.arrows img:last-child {
+  margin-left: 44px;
+}
+
+.requestButton {
+  display: inline-flex;
+  height: 60px;
+  padding: 22px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #fafafa;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+}

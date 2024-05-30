@@ -1,0 +1,41 @@
+.draw {
+  margin: 0 auto;
+  padding: 0px 8px;
+  &__row {
+    margin-top: 60px;
+    border-radius: 30px;
+    background: #e3e8f9;
+    padding: 40px 15px 20px 15px;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__button {
+    display: flex;
+
+    height: 55px;
+    padding: 22px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #fff;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 102%; /* 18.36px */
+  }
+  &__button:hover {
+    border-radius: 10px;
+    background: #000;
+    color: #fff;
+  }
+  &__image {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    object-fit: contain;
+  }
+  &__image img {
+    width: 100%;
+  }
+}

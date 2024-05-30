@@ -1,0 +1,61 @@
+.instagram__stories {
+  width: 407px;
+  height: 499px;
+  border-radius: 30px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slide__container {
+  position: relative;
+  object-fit: contain;
+}
+
+.slide__container img {
+  width: 100%;
+}
+
+.story__info {
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+  color: white;
+  width: 348px;
+}
+
+.story__info p {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.story__info div {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.progress__bars {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.progress__bar {
+  border-radius: 4px;
+  background: #676d6d;
+  width: 83px;
+  height: 4px;
+  margin-right: 5px;
+}
+
+.progress__bar:last-child {
+  margin: 0;
+}
+
+.progress__bar.active {
+  background: #fff;
+}

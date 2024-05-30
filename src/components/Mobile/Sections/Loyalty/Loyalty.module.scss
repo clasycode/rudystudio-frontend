@@ -1,0 +1,54 @@
+.loyalty {
+  margin: 0 auto;
+  padding: 0px 23px;
+  &__row {
+    margin-top: 60px;
+  }
+  &__text {
+    margin-bottom: 15px;
+    font-weight: 500;
+    width: 290px;
+  }
+  &__column {
+  }
+  &__plank {
+    display: inline-flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  &__row2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  &__button {
+    color: #000;
+    display: inline-flex;
+    height: 60px;
+    width: 100%;
+    padding: 22px 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #f7f7f7;
+    font-weight: 500;
+  }
+  &__button:hover {
+    border-radius: 10px;
+    background: #000;
+    color: #fff;
+  }
+  &__image {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    object-fit: contain;
+  }
+  &__image img {
+    width: 100%;
+  }
+}

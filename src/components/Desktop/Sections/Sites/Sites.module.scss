@@ -1,0 +1,138 @@
+.sites {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 150px;
+  &__title {
+    margin-top: 120px;
+    margin-bottom: 60px;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__column {
+    padding: 30px;
+    width: 565px;
+    border-radius: 30px;
+  }
+  &__block {
+    border-radius: 30px;
+  }
+}
+
+.column {
+  &__image {
+    margin: 0 auto;
+    object-fit: contain;
+    width: 384px;
+  }
+  &__image img {
+    width: 100%;
+  }
+  &__title {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__text {
+    margin-bottom: 15px;
+    line-height: 111%; /* 19.98px */
+    width: 448px;
+  }
+  &__plank {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: #000;
+  }
+  &__row2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+  }
+}
+
+.block {
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__row {
+    margin-top: 10px;
+    display: flex;
+  }
+  &__text {
+    margin-bottom: 15px;
+    line-height: 111%; /* 19.98px */
+  }
+  &__column {
+    width: 489px;
+    padding: 30px;
+  }
+  &__plank {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: #000;
+  }
+  &__row2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+  &__image {
+    margin-top: 30px;
+    object-fit: contain;
+    width: 384px;
+  }
+  &__image img {
+    width: 100%;
+  }
+  &__button {
+    margin-top: 245px;
+    margin-left: 75px;
+  }
+}
+
+.button {
+  display: inline-flex;
+  height: 60px;
+  width: 159px;
+  padding: 22px 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+}
+
+.button:hover {
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cost {
+  display: inline-flex;
+  padding: 10px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #000;
+  color: #000;
+}

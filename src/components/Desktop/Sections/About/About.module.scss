@@ -1,0 +1,51 @@
+.about {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 100px;
+  &__row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__columnOne {
+    border-radius: 30px;
+    background: #3d3bff;
+    padding: 50px;
+    width: 823px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title {
+    color: #fff;
+    font-family: "Graphik LCG";
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 102%;
+    width: 600px;
+  }
+  &__spheres {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.spheres {
+  &__row {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  &__row:last-child {
+    margin-bottom: 0;
+  }
+  &__item {
+    color: #000;
+    display: inline-flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #fff;
+    margin-left: 5px;
+  }
+}

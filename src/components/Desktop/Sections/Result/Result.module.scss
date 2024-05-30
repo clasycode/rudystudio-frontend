@@ -1,0 +1,46 @@
+.result {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 150px;
+  &__row {
+    display: flex;
+    margin-top: 120px;
+    justify-content: space-between;
+    border-radius: 30px;
+    background: #e3e8f9;
+  }
+  &__column1 {
+    width: 440px;
+    padding: 30px;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__row2 {
+    display: flex;
+  }
+  &__column2 {
+    padding: 15px;
+  }
+  &__video:first-child {
+    margin-right: 10px;
+  }
+  &__video {
+    position: relative;
+    cursor: pointer;
+    object-fit: contain;
+    width: 262px;
+  }
+  &__video img {
+    width: 100%;
+  }
+  &__play {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  &__text {
+    color: #000;
+    width: 440px;
+  }
+}

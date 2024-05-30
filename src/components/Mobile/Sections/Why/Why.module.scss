@@ -1,0 +1,22 @@
+.why {
+  margin: 0 auto;
+  padding: 0px 23px;
+  &__row {
+    margin-top: 50px;
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+}
+
+.cards {
+  &__row {
+    margin-bottom: 10px;
+  }
+  &__item {
+    margin-bottom: 10px;
+  }
+  &__item:last-child {
+    margin: 0;
+  }
+}
