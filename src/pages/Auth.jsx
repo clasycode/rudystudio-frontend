@@ -9,8 +9,8 @@ import { ADMIN_ROUTE } from "../utils/consts";
 const Auth = observer(() => {
   const { user } = useContext(Context);
   const navigate = useNavigate();
-  const [email, setEmail] = useState("admin");
-  const [password, setPassword] = useState("admin");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const click = async () => {
     try {
