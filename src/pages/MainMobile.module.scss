@@ -1,0 +1,9 @@
+.withTelegram {
+  margin-top: 60px;
+  transition: margin-top 0.5s ease-in-out;
+}
+
+.withoutTelegram {
+  margin-top: 0;
+  transition: margin-top 0.5s ease-in-out;
+}

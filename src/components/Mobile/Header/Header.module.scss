@@ -1,12 +1,12 @@
 .header {
   background-color: #fff;
   max-width: 375px;
-  margin: 0 auto;
   color: #000;
   &__row {
     display: flex;
     align-items: center;
     padding: 19px 23px;
+    margin: 0 auto;
   }
   &__logo {
     color: #0c0c0c;

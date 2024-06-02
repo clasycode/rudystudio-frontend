@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Cases() {
-  return <div>Cases</div>;
+  return <h1>Разработчику не заплатили за эту страницу :/</h1>;
 }

@@ -1,0 +1,9 @@
+.withTelegram {
+  margin-top: 140px; /* 60px для плашки Telegram + 60px для хедера */
+  transition: margin-top 0.5s ease-in-out;
+}
+
+.withoutTelegram {
+  margin-top: 80px; /* Только высота хедера */
+  transition: margin-top 0.5s ease-in-out;
+}

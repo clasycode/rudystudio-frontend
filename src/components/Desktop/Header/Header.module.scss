@@ -1,16 +1,27 @@
 .header {
-  max-width: 1440px;
-  margin: 0 auto;
-  display: flex;
-  padding: 20px 150px;
-  align-items: center;
-  justify-content: space-between;
   color: #000;
+  position: fixed;
+  top: 60px;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
+  transition: top 0.5s ease-in-out; /* Анимация изменения top */
+  &__row {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    padding: 20px 150px;
+    align-items: center;
+    justify-content: space-between;
+  }
   &__logo {
     color: #0c0c0c;
     font-size: 24px;
     margin-right: 132px;
     margin-top: -6px;
+  }
+  &__logo a {
+    color: #0c0c0c;
   }
   &__logo a:visited {
     color: #0c0c0c;
@@ -69,4 +80,8 @@
   &__item:first-child {
     margin-right: 17px;
   }
+}
+
+.headerHidden {
+  top: 0; /* Изменение top при скрытии плашки Telegram */
 }

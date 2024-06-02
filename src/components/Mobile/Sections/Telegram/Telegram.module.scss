@@ -1,0 +1,54 @@
+.tg {
+  background: #3d3bff;
+  position: fixed; /* Фиксируем элемент */
+  bottom: 1%;
+  left: 1%;
+  right: 0;
+  transition: transform 0.5s ease-in-out; /* Анимация при показе/скрытии */
+  z-index: 1000; /* Устанавливаем z-index, чтобы элемент был над другими */
+  width: 98%;
+  border-radius: 25px;
+
+  &.hidden {
+    transform: translateY(-100%); /* Скрытие элемента */
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 66px;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 25px;
+    max-width: 140px;
+  }
+
+  &__button {
+    border-radius: 20px;
+    background: #6a70f1;
+    display: inline-flex;
+    height: 36px;
+    padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer; /* Курсор указывает, что элемент кликабельный */
+    margin-right: 60px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-55%);
+    right: 7%;
+    cursor: pointer; /* Курсор указывает, что элемент кликабельный */
+  }
+}
