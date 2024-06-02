@@ -1,0 +1,37 @@
+@media only screen and (min-width: 1000px) {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0px 100px;
+  }
+
+  .policy {
+    margin-top: 80px;
+    &__title {
+      margin-bottom: 30px;
+      font-weight: 400;
+    }
+    &__text {
+      color: #000;
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .container {
+    min-width: 375px;
+    margin: 0 auto;
+    padding: 0px 23px;
+  }
+
+  .policy {
+    margin-top: 20px;
+    &__title {
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+    &__text {
+      color: #000;
+    }
+  }
+}

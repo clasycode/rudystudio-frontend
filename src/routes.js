@@ -9,6 +9,7 @@ import SuccessMobile from "./pages/SuccessMobile";
 import Cases from "./pages/Cases";
 import CasePage from "./pages/CasePage";
 import EditCase from "./components/Admin/ChangeCase/EditCase";
+import Policy from "./pages/Policy";
 
 import {
   ADMIN_ROUTE,
@@ -17,6 +18,7 @@ import {
   SUCCESS_ROUTE,
   ERROR_ROUTE,
   CASES_ROUTE,
+  POLICY_ROUTE,
 } from "./utils/consts";
 
 const getRoutes = (isMobile) => {
@@ -59,6 +61,10 @@ const getRoutes = (isMobile) => {
     {
       path: CASES_ROUTE + "/:caseLink",
       Component: CasePage,
+    },
+    {
+      path: POLICY_ROUTE,
+      Component: Policy,
     },
   ];
 

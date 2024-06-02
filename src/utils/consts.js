@@ -4,3 +4,4 @@ export const MAIN_ROUTE = "/";
 export const SUCCESS_ROUTE = "/success";
 export const ERROR_ROUTE = "/not-found";
 export const CASES_ROUTE = "/cases";
+export const POLICY_ROUTE = "privacy-policy";
