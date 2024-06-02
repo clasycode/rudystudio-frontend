@@ -4,6 +4,7 @@ import check from "../../../../assets/icon/check.svg";
 import check_clicked from "../../../../assets/icon/check_clicked.svg";
 import check_error from "../../../../assets/icon/check_error.svg";
 import { useNavigate } from "react-router-dom";
+import { POLICY_ROUTE } from "../../../../utils/consts";
 
 export default function ModalRequest({ isOpen, onClose }) {
   const [name, setName] = useState("");
@@ -167,7 +168,7 @@ export default function ModalRequest({ isOpen, onClose }) {
                     <label htmlFor="consent">
                       Я даю согласие на<span> </span>
                       <span onClick={() => onClose()}>
-                        <a href="#" className={styles.link}>
+                        <a href="/privacy-policy" className={styles.link}>
                           обработку персональных данных
                         </a>
                       </span>

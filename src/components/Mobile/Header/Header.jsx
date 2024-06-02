@@ -6,6 +6,8 @@ import cost from "../../../assets/icon/cost.svg";
 import steps from "../../../assets/icon/steps.svg";
 import telegram_blue from "../../../assets/icon/telegram_blue.svg";
 import whatsapp_blue from "../../../assets/icon/whatsapp_blue.svg";
+import { MAIN_ROUTE } from "../../../utils/consts";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
   function handleClick(link) {
@@ -28,10 +30,17 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
+  const navigate = useNavigate();
+
   return (
     <header className={styles.header}>
       <div className={styles.header__row}>
-        <div className={styles.header__logo}>RudyStudio</div>
+        <div
+          className={styles.header__logo}
+          onClick={() => navigate(MAIN_ROUTE)}
+        >
+          RudyStudio
+        </div>
         <div className={styles.header__button} onClick={openModal}>
           Заказать сайт
         </div>
@@ -49,7 +58,12 @@ export default function Header() {
           >
             <div className={styles.menu__content}>
               <div className={styles.header__row}>
-                <div className={styles.header__logo2}>RudyStudio</div>
+                <div
+                  className={styles.header__logo2}
+                  onClick={() => navigate(MAIN_ROUTE)}
+                >
+                  RudyStudio
+                </div>
                 <div className={styles.header__button2} onClick={openModal}>
                   Заказать сайт
                 </div>

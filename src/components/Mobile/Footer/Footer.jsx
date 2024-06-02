@@ -133,7 +133,7 @@ export default function Footer() {
             Отправляя заявку, вы принимаете условия <br />
             <span></span>
             <span className={styles.footer__underline}>
-              <a href="#">политики конфиденциальности</a>
+              <a href="/privacy-policy">политики конфиденциальности</a>
             </span>
           </div>
           <div className={styles.footer__item}>
@@ -183,7 +183,7 @@ export default function Footer() {
           </div>
         </div>
         <div className={styles.footer__confidence2}>
-          <a href="#">Политика конфиденциальности</a>
+          <a href="/privacy-policy">Политика конфиденциальности</a>
         </div>
       </div>
     </footer>

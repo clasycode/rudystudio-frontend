@@ -171,7 +171,7 @@ export default function ModalRequest({ isOpen, onClose }) {
                     <label htmlFor="consent">
                       даю согласие на<span> </span>
                       <span onClick={() => onClose()}>
-                        <a href="#" className={styles.link}>
+                        <a href="/privacy-policy" className={styles.link}>
                           обработку персональных данных
                         </a>
                       </span>
