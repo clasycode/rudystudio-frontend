@@ -108,183 +108,194 @@ const AddCase = observer(
 
     return (
       <div className={styles.cases}>
-        <div className={`${styles.cases__form} ${styles.form}`}>
-          <div className={styles.form__title}>
-            <h2>Основные</h2>
-          </div>
-          <div className={styles.form__button}>
-            <label className={styles.button1} htmlFor="caseImg">
-              Добавить обложку
-            </label>
-            <input
-              id="caseImg"
-              type="file"
-              onChange={selectFile(setCaseImg, setCaseImgPreview)}
-              style={{ display: "none" }}
-            />
-            {caseImgPreview && <img src={caseImgPreview} alt="Обложка" />}
-          </div>
-          <div className={styles.form__input}>
-            <input
-              type="text"
-              placeholder="Ссылка на кейс"
-              value={caseLink}
-              onChange={(e) => setCaseLink(e.target.value)}
-            />
-          </div>
-          <div className={styles.form__input}>
-            <input
-              type="text"
-              placeholder="Ссылка на сайт"
-              value={siteLink}
-              onChange={(e) => setSiteLink(e.target.value)}
-            />
-          </div>
-          <div className={styles.form__input}>
-            <input
-              type="text"
-              placeholder="Заголовок ПК версия"
-              value={titleDesktop}
-              onChange={(e) => setTitleDesktop(e.target.value)}
-            />
-          </div>
-          <div className={styles.form__input}>
-            <input
-              type="text"
-              placeholder="Заголовок мобильная версия"
-              value={titleMobile}
-              onChange={(e) => setTitleMobile(e.target.value)}
-            />
-          </div>
-          <div className={styles.color}>
-            <div className={styles.form__input1}>
+        <div className={styles.container}>
+          <div className={`${styles.cases__form} ${styles.form}`}>
+            <div className={styles.form__title}>
+              <h2>Основные</h2>
+            </div>
+            <div className={styles.form__button}>
+              <label className={styles.button1} htmlFor="caseImg">
+                Добавить обложку
+              </label>
+              <input
+                id="caseImg"
+                type="file"
+                onChange={selectFile(setCaseImg, setCaseImgPreview)}
+                style={{ display: "none" }}
+              />
+              {caseImgPreview && <img src={caseImgPreview} alt="Обложка" />}
+            </div>
+            <div className={styles.form__input}>
               <input
                 type="text"
-                placeholder="Сфера"
-                value={sphere}
-                onChange={(e) => setSphere(e.target.value)}
+                placeholder="Ссылка на кейс"
+                value={caseLink}
+                onChange={(e) => setCaseLink(e.target.value)}
               />
             </div>
-            <div className={styles.form__input2}>
+            <div className={styles.form__input}>
               <input
-                type="color"
-                placeholder="Цвет сферы #C7C7C7"
-                value={sphereColor}
-                onChange={(e) => setSphereColor(e.target.value)}
+                type="text"
+                placeholder="Ссылка на сайт"
+                value={siteLink}
+                onChange={(e) => setSiteLink(e.target.value)}
+              />
+            </div>
+            <div className={styles.form__input}>
+              <input
+                type="text"
+                placeholder="Заголовок ПК версия"
+                value={titleDesktop}
+                onChange={(e) => setTitleDesktop(e.target.value)}
+              />
+            </div>
+            <div className={styles.form__input}>
+              <input
+                type="text"
+                placeholder="Заголовок мобильная версия"
+                value={titleMobile}
+                onChange={(e) => setTitleMobile(e.target.value)}
+              />
+            </div>
+            <div className={styles.color}>
+              <div className={styles.form__input1}>
+                <input
+                  type="text"
+                  placeholder="Сфера"
+                  value={sphere}
+                  onChange={(e) => setSphere(e.target.value)}
+                />
+              </div>
+              <div className={styles.form__input2}>
+                <input
+                  type="color"
+                  placeholder="Цвет сферы #C7C7C7"
+                  value={sphereColor}
+                  onChange={(e) => setSphereColor(e.target.value)}
+                />
+              </div>
+            </div>
+          </div>
+          <div className={`${styles.cases__form} ${styles.form}`}>
+            <div className={styles.form__title}>
+              <h2>Кейс</h2>
+            </div>
+            <div className={styles.form__button}>
+              <label className={styles.button2} htmlFor="siteImg">
+                Добавить обложку кейса
+              </label>
+              <input
+                id="siteImg"
+                type="file"
+                onChange={selectFile(setSiteImg, setSiteImgPreview)}
+                style={{ display: "none" }}
+              />
+              {siteImgPreview && (
+                <img src={siteImgPreview} alt="Обложка кейса" />
+              )}
+            </div>
+            <div className={styles.form__input}>
+              <textarea
+                type="text"
+                placeholder="О чем"
+                value={what}
+                onChange={(e) => setWhat(e.target.value)}
+                rows={10}
+                maxLength={1000}
+              />
+            </div>
+            <div className={styles.form__input}>
+              <textarea
+                type="text"
+                placeholder="Проблемы"
+                value={problem}
+                onChange={(e) => setProblem(e.target.value)}
+                rows={10}
+                maxLength={1000}
+              />
+            </div>
+            <div className={styles.form__input}>
+              <textarea
+                type="text"
+                placeholder="Цели"
+                value={aim}
+                onChange={(e) => setAim(e.target.value)}
+                rows={10}
+                maxLength={1000}
               />
             </div>
           </div>
-        </div>
-        <div className={`${styles.cases__form} ${styles.form}`}>
-          <div className={styles.form__title}>
-            <h2>Кейс</h2>
-          </div>
-          <div className={styles.form__button}>
-            <label className={styles.button2} htmlFor="siteImg">
-              Добавить обложку кейса
-            </label>
-            <input
-              id="siteImg"
-              type="file"
-              onChange={selectFile(setSiteImg, setSiteImgPreview)}
-              style={{ display: "none" }}
-            />
-            {siteImgPreview && <img src={siteImgPreview} alt="Обложка кейса" />}
-          </div>
-          <div className={styles.form__input}>
-            <textarea
-              type="text"
-              placeholder="О чем"
-              value={what}
-              onChange={(e) => setWhat(e.target.value)}
-              rows={10}
-              maxLength={1000}
-            />
-          </div>
-          <div className={styles.form__input}>
-            <textarea
-              type="text"
-              placeholder="Проблемы"
-              value={problem}
-              onChange={(e) => setProblem(e.target.value)}
-              rows={10}
-              maxLength={1000}
-            />
-          </div>
-          <div className={styles.form__input}>
-            <textarea
-              type="text"
-              placeholder="Цели"
-              value={aim}
-              onChange={(e) => setAim(e.target.value)}
-              rows={10}
-              maxLength={1000}
-            />
-          </div>
-        </div>
-        <div className={`${styles.cases__form} ${styles.form}`}>
-          <div className={styles.form__title}>
-            <h2>Дополнительно</h2>
-          </div>
-          {sections.map((section, index) => (
-            <div className={styles.section} key={index}>
-              <div className={styles.form__input}>
-                <input
-                  type="text"
-                  placeholder="Заголовок"
-                  value={section.title}
-                  onChange={(e) => handleChange(index, "title", e.target.value)}
-                />
-              </div>
-              <div className={styles.form__input}>
-                <textarea
-                  type="text"
-                  placeholder="Текст"
-                  value={section.text}
-                  onChange={(e) => handleChange(index, "text", e.target.value)}
-                  rows={10}
-                  maxLength={1000}
-                />
-              </div>
-              <div className={styles.form__button}>
-                <label
-                  className={styles.button4}
-                  htmlFor={`sectionImg${index}`}
-                >
-                  Выбрать изображение
-                </label>
-                <input
-                  id={`sectionImg${index}`}
-                  type="file"
-                  onChange={(e) => handleFileChange(index, e)}
-                  style={{ display: "none" }}
-                />
-                {section.imgPreview && (
-                  <div className={styles.section__preview}>
-                    <img src={section.imgPreview} alt={`Секция ${index + 1}`} />
-                    <div
-                      className={styles.form__button}
-                      onClick={() => handleRemoveImage(index)}
-                    >
-                      <img src={delete_img} alt="" />
-                    </div>
-                  </div>
-                )}
-              </div>
-              <div
-                className={styles.section__button}
-                onClick={() => handleRemoveSection(index)}
-              >
-                <img src={delete_img} alt="" />
-              </div>
+          <div className={`${styles.cases__form} ${styles.form}`}>
+            <div className={styles.form__title}>
+              <h2>Дополнительно</h2>
             </div>
-          ))}
-        </div>
+            {sections.map((section, index) => (
+              <div className={styles.section} key={index}>
+                <div className={styles.form__input}>
+                  <input
+                    type="text"
+                    placeholder="Заголовок"
+                    value={section.title}
+                    onChange={(e) =>
+                      handleChange(index, "title", e.target.value)
+                    }
+                  />
+                </div>
+                <div className={styles.form__input}>
+                  <textarea
+                    type="text"
+                    placeholder="Текст"
+                    value={section.text}
+                    onChange={(e) =>
+                      handleChange(index, "text", e.target.value)
+                    }
+                    rows={10}
+                    maxLength={1000}
+                  />
+                </div>
+                <div className={styles.form__button}>
+                  <label
+                    className={styles.button4}
+                    htmlFor={`sectionImg${index}`}
+                  >
+                    Выбрать изображение
+                  </label>
+                  <input
+                    id={`sectionImg${index}`}
+                    type="file"
+                    onChange={(e) => handleFileChange(index, e)}
+                    style={{ display: "none" }}
+                  />
+                  {section.imgPreview && (
+                    <div className={styles.section__preview}>
+                      <img
+                        src={section.imgPreview}
+                        alt={`Секция ${index + 1}`}
+                      />
+                      <div
+                        className={styles.form__button}
+                        onClick={() => handleRemoveImage(index)}
+                      >
+                        <img src={delete_img} alt="" />
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <div
+                  className={styles.section__button}
+                  onClick={() => handleRemoveSection(index)}
+                >
+                  <img src={delete_img} alt="" />
+                </div>
+              </div>
+            ))}
+          </div>
 
-        <div className={styles.form__button} onClick={handleAddSection}>
-          <label className={styles.button3} htmlFor="">
-            Добавить секцию
-          </label>
+          <div className={styles.form__button} onClick={handleAddSection}>
+            <label className={styles.button3} htmlFor="">
+              Добавить секцию
+            </label>
+          </div>
         </div>
       </div>
     );
