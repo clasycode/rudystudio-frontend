@@ -17,6 +17,9 @@ const AddCase = observer(
 
     const [siteImg, setSiteImg] = useState(null);
     const [siteImgPreview, setSiteImgPreview] = useState(null);
+    const [siteImgMobile, setSiteImgMobile] = useState(null);
+    const [siteImgMobilePreview, setSiteImgMobilePreview] = useState(null);
+
     const [what, setWhat] = useState("");
     const [problem, setProblem] = useState("");
     const [aim, setAim] = useState("");
@@ -80,6 +83,7 @@ const AddCase = observer(
       formData.append("sphere", sphere);
       formData.append("sphere_color", sphereColor);
       formData.append("siteImg", siteImg);
+      formData.append("siteImgMobile", siteImgMobile);
       formData.append("what", what);
       formData.append("problem", problem);
       formData.append("aim", aim);
@@ -182,7 +186,7 @@ const AddCase = observer(
             </div>
             <div className={styles.form__button}>
               <label className={styles.button2} htmlFor="siteImg">
-                Добавить обложку кейса
+                Добавить обложку для десктопной версии
               </label>
               <input
                 id="siteImg"
@@ -192,6 +196,23 @@ const AddCase = observer(
               />
               {siteImgPreview && (
                 <img src={siteImgPreview} alt="Обложка кейса" />
+              )}
+            </div>
+            <div className={styles.form__button}>
+              <label className={styles.button2} htmlFor="siteImgMobile">
+                Добавить обложку для мобильной версии
+              </label>
+              <input
+                id="siteImgMobile"
+                type="file"
+                onChange={selectFile(setSiteImgMobile, setSiteImgMobilePreview)}
+                style={{ display: "none" }}
+              />
+              {siteImgMobilePreview && (
+                <img
+                  src={siteImgMobilePreview}
+                  alt="Обложка для мобильной версии"
+                />
               )}
             </div>
             <div className={styles.form__input}>
@@ -276,7 +297,7 @@ const AddCase = observer(
                         className={styles.form__button}
                         onClick={() => handleRemoveImage(index)}
                       >
-                        <img src={delete_img} alt="" />
+                        <img src={delete_img} alt="Удалить" />
                       </div>
                     </div>
                   )}
@@ -285,7 +306,7 @@ const AddCase = observer(
                   className={styles.section__button}
                   onClick={() => handleRemoveSection(index)}
                 >
-                  <img src={delete_img} alt="" />
+                  <img src={delete_img} alt="Удалить секцию" />
                 </div>
               </div>
             ))}

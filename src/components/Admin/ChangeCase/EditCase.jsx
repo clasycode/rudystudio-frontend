@@ -18,6 +18,8 @@ const EditCase = observer(() => {
     sphere_color: "",
     siteImg: null,
     siteImgPreview: null,
+    siteImgMobile: null,
+    siteImgMobilePreview: null,
     what: "",
     problem: "",
     aim: "",
@@ -37,6 +39,9 @@ const EditCase = observer(() => {
             : null,
           siteImgPreview: data.siteImg
             ? `${import.meta.env.VITE_API_URL}static/${data.siteImg}`
+            : null,
+          siteImgMobilePreview: data.siteImgMobile
+            ? `${import.meta.env.VITE_API_URL}static/${data.siteImgMobile}`
             : null,
           sections: data.sections.map((section) => ({
             ...section,
@@ -119,6 +124,7 @@ const EditCase = observer(() => {
     formData.append("sphere", caseData.sphere);
     formData.append("sphere_color", caseData.sphere_color);
     formData.append("siteImg", caseData.siteImg);
+    formData.append("siteImgMobile", caseData.siteImgMobile);
     formData.append("what", caseData.what);
     formData.append("problem", caseData.problem);
     formData.append("aim", caseData.aim);
@@ -255,6 +261,27 @@ const EditCase = observer(() => {
             />
             {caseData.siteImgPreview && (
               <img src={caseData.siteImgPreview} alt="Обложка кейса" />
+            )}
+          </div>
+          <div className={styles.form__button}>
+            <label className={styles.button2} htmlFor="siteImgMobile">
+              Добавить обложку для мобильной версии
+            </label>
+            <input
+              id="siteImgMobile"
+              type="file"
+              onChange={selectFile(
+                (file) => setCaseData({ ...caseData, siteImgMobile: file }),
+                (preview) =>
+                  setCaseData({ ...caseData, siteImgMobilePreview: preview })
+              )}
+              style={{ display: "none" }}
+            />
+            {caseData.siteImgMobilePreview && (
+              <img
+                src={caseData.siteImgMobilePreview}
+                alt="Обложка для мобильной версии"
+              />
             )}
           </div>
           <div className={styles.form__input}>

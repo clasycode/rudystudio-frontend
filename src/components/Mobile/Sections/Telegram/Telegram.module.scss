@@ -3,10 +3,9 @@
   position: fixed; /* Фиксируем элемент */
   bottom: 1%;
   left: 1%;
-  right: 0;
   transition: transform 0.5s ease-in-out; /* Анимация при показе/скрытии */
   z-index: 1000; /* Устанавливаем z-index, чтобы элемент был над другими */
-  width: 98%;
+  width: 94%;
   border-radius: 25px;
 
   &.hidden {

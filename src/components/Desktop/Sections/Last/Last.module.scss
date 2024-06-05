@@ -1,3 +1,11 @@
+.case {
+  margin: -5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure the case element takes the full height */
+}
+
 .last {
   max-width: 1440px;
   margin: 0 auto;
@@ -12,49 +20,8 @@
   margin-bottom: 40px;
 }
 
-.carousel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .casesContainer {
-  display: flex;
-  overflow-x: hidden;
-  flex-grow: 1;
-}
-
-.arrow {
-  cursor: pointer;
-  font-size: 24px;
-  margin: 0 10px;
-}
-
-.case {
-  width: 50%;
-  box-sizing: border-box;
-}
-
-.case:first-child {
-  margin-right: 20px;
-}
-
-.caseContent {
-  background-color: #f9f9f9;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.caseContent h2 {
-  font-size: 18px;
-  color: #333;
-}
-
-.cases {
-  margin: 0 auto;
-  max-width: 1440px;
+  position: relative;
 }
 
 .cases__row {
@@ -63,34 +30,43 @@
 }
 
 .cases__column {
-  flex: 0 0 calc(50% - 20px);
   border-radius: 30px;
   background: #f8f8f8;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure the column element takes the full height */
 }
 
 .column {
+  border-radius: 30px;
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure the column element takes the full height */
+  justify-content: space-between; /* Distribute space between items */
 }
 
 .column__img {
-  width: 100%;
-  height: 215px;
-  object-fit: contain;
-  border-radius: 10px;
+  height: 230px;
+  border-radius: 30px 30px 0px 0px;
+  background: #f8f8f8;
+  margin: 0 auto;
 }
 
 .column__img img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 30px 30px 0px 0px;
 }
 
 .column__title {
+  margin-top: 20px; /* Ensure the title has a top margin of 20px */
   margin-bottom: 45px;
-  margin-top: 20px;
   font-size: 24px;
   line-height: 110%;
+  flex-grow: 1; /* Ensure the title takes available space */
+  display: flex;
+  align-items: flex-start; /* Align title at the top of its flex container */
 }
 
 .column__title a {
@@ -102,12 +78,15 @@
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 .column__row {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: auto; /* Push row to the bottom */
 }
 
 .column__button {
@@ -131,15 +110,15 @@
 
 .arrows {
   display: flex;
-  flex-direction: row-reverse;
+  align-items: center;
 }
 
-.arrows img {
+.arrow {
   cursor: pointer;
-}
-
-.arrows img:last-child {
-  margin-left: 44px;
+  margin-right: 10px;
+  padding: 22px;
+  border-radius: 10px;
+  background: #fafafa;
 }
 
 .requestButton {
@@ -155,4 +134,17 @@
   font-weight: 500;
   color: #000;
   cursor: pointer;
+}
+
+.slick-slide {
+  display: flex !important; /* Ensure slick-slide is a flex container */
+  align-items: stretch !important; /* Ensure slides stretch to the same height */
+}
+
+.slick-list {
+  display: flex;
+}
+
+.slick-track {
+  display: flex;
 }

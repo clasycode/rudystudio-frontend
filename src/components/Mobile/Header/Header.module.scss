@@ -2,10 +2,12 @@
   background-color: #fff;
   max-width: 375px;
   color: #000;
+  margin: 0 auto;
   &__row {
     display: flex;
     align-items: center;
     padding: 19px 23px;
+    max-width: 375px;
     margin: 0 auto;
   }
   &__logo {

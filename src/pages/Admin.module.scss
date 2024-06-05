@@ -27,6 +27,7 @@
     margin-left: 4px;
     margin-top: 30px;
     margin-bottom: 20px;
+    cursor: pointer;
   }
   &__button {
     display: inline-flex;
@@ -37,6 +38,7 @@
     background: #f8f8ff;
     margin-top: 30px;
     margin-bottom: 20px;
+    cursor: pointer;
   }
   &__column1 {
     display: flex;
@@ -89,6 +91,9 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+  ul li {
+    cursor: pointer;
   }
 }
 

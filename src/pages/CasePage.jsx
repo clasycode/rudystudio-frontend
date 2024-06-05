@@ -50,11 +50,26 @@ const CasePage = () => {
             Перейти на сайт
           </div>
           <div className={styles.case__img}>
-            {siteCase.siteImg && (
-              <img
-                src={`${baseUrl}static/${siteCase.siteImg}`}
-                alt="Site Image"
-              />
+            {isMobile ? (
+              <>
+                {" "}
+                {siteCase.siteImgMobile && (
+                  <img
+                    src={`${baseUrl}static/${siteCase.siteImgMobile}`}
+                    alt="Site Image Mobile"
+                  />
+                )}
+              </>
+            ) : (
+              <>
+                {" "}
+                {siteCase.siteImg && (
+                  <img
+                    src={`${baseUrl}static/${siteCase.siteImg}`}
+                    alt="Site Image"
+                  />
+                )}
+              </>
             )}
           </div>
           <div className={styles.case__row}>

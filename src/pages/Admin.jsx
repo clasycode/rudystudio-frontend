@@ -1,4 +1,6 @@
 import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { MAIN_ROUTE } from "../utils/consts";
 import styles from "./Admin.module.scss";
 import Cases from "../components/Admin/Cases/Cases";
 import Blog from "../components/Admin/Blog/Blog";
@@ -25,6 +27,8 @@ export default function Admin() {
       addCaseRef.current.handleSubmit();
     }
   };
+
+  const navigate = useNavigate();
 
   const renderContent = () => {
     if (showAddSection) {
@@ -56,8 +60,18 @@ export default function Admin() {
     <div className={styles.admin}>
       <div className={styles.admin__fixed}>
         <div className={styles.admin__row}>
-          <div className={styles.admin__logo}>RudyStudio</div>
-          <div className={styles.admin__button}>На сайт</div>
+          <div
+            className={styles.admin__logo}
+            onClick={() => navigate(MAIN_ROUTE)}
+          >
+            RudyStudio
+          </div>
+          <div
+            className={styles.admin__button}
+            onClick={() => navigate(MAIN_ROUTE)}
+          >
+            На сайт
+          </div>
         </div>
         <div className={styles.admin__row}>
           <div className={styles.admin__column1}>

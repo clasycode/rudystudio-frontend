@@ -12,37 +12,31 @@
   margin-bottom: 30px;
 }
 
-.carousel {
-  overflow-x: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.casesContainer {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
 .case {
   margin-bottom: 20px;
+  height: 100%;
 }
 
 .cases__column {
+  border-radius: 30px;
+  background: #f8f8f8;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  height: 100%; /* Ensure the column element takes the full height */
 }
 
 .column {
   border-radius: 30px;
-  background: #f8f8f8;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure the column element takes the full height */
+  justify-content: space-between; /* Distribute space between items */
 }
 
 .column__img {
-  height: 200px;
-  width: 360px;
+  min-width: 299px;
+  height: 209px;
   border-radius: 25px 25px 0px 0px;
   background: #f8f8f8;
 }
@@ -51,12 +45,16 @@
   width: 100%;
   height: 100%;
   border-radius: 25px 25px 0px 0px;
-  object-fit: cover;
 }
 
 .column__title {
+  margin-top: 20px; /* Ensure the title has a top margin of 20px */
+  margin-bottom: 45px;
   font-size: 20px;
-  margin: 20px 0px 45px 0px;
+  line-height: 110%;
+  flex-grow: 1; /* Ensure the title takes available space */
+  display: flex;
+  align-items: flex-start; /* Align title at the top of its flex container */
 }
 
 .column__title a {
@@ -69,6 +67,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-top: auto; /* Push row to the bottom */
 }
 
 .column__sphere {
@@ -94,21 +93,15 @@
   width: 100%;
 }
 
-.dots {
+.slick-slide {
+  display: flex !important; /* Ensure slick-slide is a flex container */
+  align-items: stretch !important; /* Ensure slides stretch to the same height */
+}
+
+.slick-list {
   display: flex;
-  justify-content: center;
-  gap: 5px;
 }
 
-.dot {
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background-color: #f1f1f1;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.activeDot {
-  background-color: #e0e0e0;
+.slick-track {
+  display: flex;
 }
