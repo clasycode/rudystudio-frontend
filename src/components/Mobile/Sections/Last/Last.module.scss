@@ -12,9 +12,17 @@
   margin-bottom: 30px;
 }
 
+.casesContainer {
+  max-width: calc(100vw - 16px);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
 .case {
   margin-bottom: 20px;
   height: 100%;
+  margin: -5px;
+  padding: 5px;
 }
 
 .cases__column {
@@ -96,10 +104,14 @@
 .slick-slide {
   display: flex !important; /* Ensure slick-slide is a flex container */
   align-items: stretch !important; /* Ensure slides stretch to the same height */
+  justify-content: center;
+  width: 100% !important;
+  box-sizing: border-box;
 }
 
 .slick-list {
   display: flex;
+  overflow: hidden;
 }
 
 .slick-track {
