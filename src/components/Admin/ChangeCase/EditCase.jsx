@@ -285,33 +285,36 @@ const EditCase = observer(() => {
             )}
           </div>
           <div className={styles.form__input}>
-            <input
+            <textarea
               type="text"
               placeholder="О чем"
               value={caseData.what}
               onChange={(e) =>
                 setCaseData({ ...caseData, what: e.target.value })
               }
+              rows={10}
             />
           </div>
           <div className={styles.form__input}>
-            <input
+            <textarea
               type="text"
               placeholder="Проблемы"
               value={caseData.problem}
               onChange={(e) =>
                 setCaseData({ ...caseData, problem: e.target.value })
               }
+              rows={10}
             />
           </div>
           <div className={styles.form__input}>
-            <input
+            <textarea
               type="text"
               placeholder="Цели"
               value={caseData.aim}
               onChange={(e) =>
                 setCaseData({ ...caseData, aim: e.target.value })
               }
+              rows={10}
             />
           </div>
         </div>
@@ -330,11 +333,12 @@ const EditCase = observer(() => {
                 />
               </div>
               <div className={styles.form__input}>
-                <input
+                <textarea
                   type="text"
                   placeholder="Текст"
                   value={section.text}
                   onChange={(e) => handleChange(index, "text", e.target.value)}
+                  rows={10}
                 />
               </div>
               <div className={styles.form__button}>
