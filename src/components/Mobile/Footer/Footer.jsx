@@ -19,6 +19,16 @@ export default function Footer() {
 
   let navigate = useNavigate();
 
+  const validatePhone = (phone) => {
+    const phoneRegexRF = /^(\+7|8)?\d{10}$/;
+    const phoneRegexRB = /^(\+375)?\d{9}$/;
+
+    if (phoneRegexRF.test(phone) || phoneRegexRB.test(phone)) {
+      return true;
+    }
+    return false;
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -26,20 +36,20 @@ export default function Footer() {
       setNameError("Пожалуйста, введите ваше имя");
       return;
     } else if (/\d/.test(name)) {
-      setNameError("Пожалуйста, используйте только буквы в имени");
+      setNameError("Используйте только буквы в имени");
       return;
     } else {
       setNameError("");
     }
 
-    if (!/^\d{10}$/.test(phone)) {
-      setPhoneError("Пожалуйста, введите корректный номер телефона");
+    if (!validatePhone(phone)) {
+      setPhoneError("Некорректный номер телефона");
       return;
     } else {
       setPhoneError("");
     }
 
-    const formattedPhone = "+7" + phone;
+    const formattedPhone = phone.startsWith("+") ? phone : "+7" + phone;
     sendMessageToTelegram({ name, phone: formattedPhone });
     setPhone("");
     setName("");
@@ -52,12 +62,28 @@ export default function Footer() {
       setName(value);
       setNameError("");
     } else {
-      setNameError("Пожалуйста, используйте только буквы в имени");
+      setNameError("Используйте только буквы в имени");
     }
   };
 
+  const handlePhoneChange = (e) => {
+    const input = e.target.value.replace(/[^\d+]/g, "");
+    let formattedPhone = input;
+
+    if (formattedPhone.startsWith("+375")) {
+      formattedPhone = formattedPhone.slice(0, 13);
+    } else if (formattedPhone.startsWith("+7")) {
+      formattedPhone = formattedPhone.slice(0, 12);
+    } else {
+      formattedPhone = formattedPhone.slice(0, 11);
+    }
+
+    setPhone(formattedPhone);
+    setPhoneError("");
+  };
+
   function handleClick(link) {
-    window.location.href = link;
+    window.open(link, "_blank");
   }
 
   function redirectToEmail() {
@@ -110,23 +136,10 @@ export default function Footer() {
             <input
               type="tel"
               value={phone}
-              onChange={(e) => {
-                const formattedPhone = e.target.value
-                  .replace(/[^\d]/g, "")
-                  .slice(0, 10);
-                setPhone(formattedPhone);
-                setPhoneError("");
-              }}
-              placeholder="(999) 999-99-99"
+              onChange={handlePhoneChange}
+              placeholder="Введите номер телефона"
               className={styles.phone__inputText}
             />
-            <span
-              className={`${styles.phone__prefix} ${
-                phone && styles.phone__prefix_active
-              }`}
-            >
-              +7
-            </span>
           </div>
           {phoneError && <div className={styles.error2}>{phoneError}</div>}
           <div className={styles.footer__confidence}>

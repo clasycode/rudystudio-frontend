@@ -32,7 +32,7 @@ export default function Last() {
     try {
       const response = await fetchCases();
       if (response && Array.isArray(response.rows)) {
-        setCases(response.rows);
+        setCases(response.rows.reverse());
       } else {
         console.error("Полученные данные не являются массивом:", response.data);
       }

@@ -78,7 +78,7 @@ export default function Sites() {
           </div>
           <div className={styles.column__row2}>
             <div className={styles.column__cost + " " + styles.cost}>
-              от 30000₽
+              от 280$
             </div>
             <div
               onClick={openModal}
@@ -128,7 +128,7 @@ export default function Sites() {
           </div>
           <div className={styles.column__row2}>
             <div className={styles.column__cost + " " + styles.cost}>
-              от 45000₽
+              от 460$
             </div>
             <div
               onClick={openModal2}
@@ -175,7 +175,7 @@ export default function Sites() {
               </div>
             </div>
             <div className={styles.block__cost + " " + styles.cost}>
-              от 55000₽
+              от 600$
             </div>
           </div>
           <div className={styles.block__image}>

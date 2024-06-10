@@ -20,7 +20,7 @@ export default function Telegram({ onClose }) {
         </div>
         <div
           className={styles.tg__button}
-          onClick={() => handleClick("https://t.me/RudyStudio")}
+          onClick={() => handleClick("https://t.me/+0o3kpGgjVlQ5NDEy")}
         >
           Подписаться
         </div>

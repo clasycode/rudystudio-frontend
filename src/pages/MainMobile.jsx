@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Mobile/Header/Header";
 import About from "../components/Mobile/Sections/About/About";
 import Why from "../components/Mobile/Sections/Why/Why";
@@ -14,7 +14,15 @@ import Telegram from "../components/Mobile/Sections/Telegram/Telegram";
 import styles from "./MainMobile.module.scss";
 
 export default function MainMobile() {
-  const [telegramVisible, setTelegramVisible] = useState(true);
+  const [telegramVisible, setTelegramVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTelegramVisible(true);
+    }, 8000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleCloseTelegram = () => {
     setTelegramVisible(false);

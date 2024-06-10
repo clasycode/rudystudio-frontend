@@ -16,6 +16,16 @@ export default function ModalRequest({ isOpen, onClose }) {
 
   let navigate = useNavigate();
 
+  const validatePhone = (phone) => {
+    const phoneRegexRF = /^(\+7|8)?\d{10}$/;
+    const phoneRegexRB = /^(\+375)?\d{9}$/;
+
+    if (phoneRegexRF.test(phone) || phoneRegexRB.test(phone)) {
+      return true;
+    }
+    return false;
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitClicked(true);
@@ -30,8 +40,10 @@ export default function ModalRequest({ isOpen, onClose }) {
       setNameError("");
     }
 
-    if (!/^\d{10}$/.test(phone)) {
-      setPhoneError("Пожалуйста, введите корректный номер телефона");
+    if (!validatePhone(phone)) {
+      setPhoneError(
+        "Пожалуйста, введите корректный номер телефона для РФ или РБ"
+      );
       return;
     } else {
       setPhoneError("");
@@ -40,7 +52,7 @@ export default function ModalRequest({ isOpen, onClose }) {
     if (!consentClicked) {
       return;
     } else {
-      const formattedPhone = "+7" + phone;
+      const formattedPhone = phone.startsWith("+") ? phone : "+7" + phone;
       sendMessageToTelegram({ name, phone: formattedPhone });
       onClose();
       setPhone("");
@@ -57,6 +69,22 @@ export default function ModalRequest({ isOpen, onClose }) {
     } else {
       setNameError("Пожалуйста, используйте только буквы в имени");
     }
+  };
+
+  const handlePhoneChange = (e) => {
+    const input = e.target.value.replace(/[^\d+]/g, "");
+    let formattedPhone = input;
+
+    if (formattedPhone.startsWith("+375")) {
+      formattedPhone = formattedPhone.slice(0, 13);
+    } else if (formattedPhone.startsWith("+7")) {
+      formattedPhone = formattedPhone.slice(0, 12);
+    } else {
+      formattedPhone = formattedPhone.slice(0, 11);
+    }
+
+    setPhone(formattedPhone);
+    setPhoneError("");
   };
 
   useEffect(() => {
@@ -141,18 +169,11 @@ export default function ModalRequest({ isOpen, onClose }) {
                 </div>
                 {nameError && <div className={styles.error}>{nameError}</div>}
                 <div className={styles.phone__input}>
-                  <span className={styles.phone__prefix}>+7</span>
                   <input
                     type="tel"
                     value={phone}
-                    onChange={(e) => {
-                      const formattedPhone = e.target.value
-                        .replace(/[^\d]/g, "")
-                        .slice(0, 10);
-                      setPhone(formattedPhone);
-                      setPhoneError("");
-                    }}
-                    placeholder="(999) 999-99-99"
+                    onChange={handlePhoneChange}
+                    placeholder="Введите номер телефона"
                     className={styles.phone__inputText}
                   />
                 </div>
